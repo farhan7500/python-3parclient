@@ -4438,7 +4438,8 @@ class HPE3ParClient(object):
             if 'error' in str.lower(r) or 'invalid' in str.lower(r) \
                or 'must specify a mapping' in str.lower(r) \
                or 'not exist' in str.lower(r) or 'no target' in str.lower(r) \
-               or 'group contains' in str.lower(r):
+               or 'group contains' in str.lower(r) \
+               or 'Target is already in this group.' in str(r):
                 return r
 
     def check_response(self, resp):
