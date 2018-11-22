@@ -4439,7 +4439,8 @@ class HPE3ParClient(object):
                or 'must specify a mapping' in str.lower(r) \
                or 'not exist' in str.lower(r) or 'no target' in str.lower(r) \
                or 'group contains' in str.lower(r) \
-               or 'Target is already in this group.' in str(r):
+               or 'Target is already in this group.' in str(r) \
+               or 'A group may have only a single synchronous target.' in str(r):
                 return r
 
     def check_response(self, resp):
